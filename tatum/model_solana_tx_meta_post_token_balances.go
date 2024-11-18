@@ -8,10 +8,9 @@
  */
 package tatum
 
-type SolanaTxTransactionMessage struct {
-	Header            *SolanaTxTransactionMessageHeader        `json:"header,omitempty"`
-	AccountKeys       []string                                 `json:"accountKeys,omitempty"`
-	RecentBlockhash   string                                   `json:"recentBlockhash,omitempty"`
-	Instructions      []SolanaTxTransactionMessageInstructions `json:"instructions,omitempty"`
-	IndexToProgramIds *interface{}                             `json:"indexToProgramIds,omitempty"`
+type SolanaTxMetaPostTokenBalances struct {
+	AccountIndex int    `json:"accountIndex,omitempty"`
+	Owner        string `json:"owner,omitempty"`
+	Mint         string `json:"mint,omitempty"`
+	ProgramId    int    `json:"programId,omitempty"`
 }
